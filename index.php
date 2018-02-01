@@ -52,7 +52,7 @@ include('/process/activate.php');
 include('/process/init.php');
 include('/admin/admin_init.php');
 include('/admin/process/wp_book_save.php');
-
+include('/process/filter_content.php');
 //enqueue styles
 include('/process/enqueue.php');
 
@@ -62,6 +62,7 @@ add_action('init','wp_book_init');
 add_action('admin_init','wp_book_admin_init');
 add_action( 'admin_enqueue_scripts', 'wpl_add_enqueue');
 add_action('save_post_book','wp_book_save_post',10,3);
+add_filter('the_content','filter_book_content');
 
 //ShortCodes
 
