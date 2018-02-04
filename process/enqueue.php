@@ -13,7 +13,7 @@ function wpl_add_enqueue(){
     
 	wp_register_style(
 		'wpl_book_bootstrap',
-		plugins_url( '/inc/styles/bootstrap.css',WPL_PLUGIN_URL )
+		plugins_url( 'inc/styles/bootstrap.css',WPL_PLUGIN_URL )
 	);
 
 	wp_enqueue_style( 'wpl_book_bootstrap');
@@ -21,7 +21,7 @@ function wpl_add_enqueue(){
        
 	wp_register_style(
 		'wpl_book_main',
-		plugins_url( '/inc/styles/main.css',WPL_PLUGIN_URL )
+		plugins_url( 'inc/styles/main.css',WPL_PLUGIN_URL )
 	);
 
 	wp_enqueue_style( 'wpl_book_main');
@@ -29,7 +29,7 @@ function wpl_add_enqueue(){
     
     wp_register_script(
 		'wpl_book_bootstrapjs',
-		plugins_url( '/inc/js/bootstrap.min.js', WPL_PLUGIN_URL)
+		plugins_url( 'inc/js/bootstrap.min.js', WPL_PLUGIN_URL)
 	);
 
 	wp_enqueue_script( 'wpl_book_bootstrapjs');

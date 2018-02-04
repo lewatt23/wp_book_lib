@@ -48,19 +48,19 @@ define('WPL_PLUGIN_URL',__FILE__);
 
 //Includes 
 
-include('/process/activate.php');
-include('/process/init.php');
-include('/admin/admin_init.php');
-include('/admin/process/wp_book_save.php');
-include('/process/filter_content.php');
-include('/process/getting_template.php');
+include('process/activate.php');
+include('process/init.php');
+include('admin/admin_init.php');
+include('admin/process/wp_book_save.php');
+include('process/filter_content.php');
+include('process/getting_template.php');
 //enqueue styles
-include('/process/enqueue.php');
-include('/process/front_enqueue.php');
-include('/admin/process/widget_init.php');
-include('/admin/widgets/daily_book.php');
-include('/admin/process/cron.php');
-include('/process/deactivate.php');
+include('process/enqueue.php');
+include('process/front_enqueue.php');
+include('admin/process/widget_init.php');
+include('admin/widgets/daily_book.php');
+include('admin/process/cron.php');
+include('process/deactivate.php'); 
 
 //Hooks
 register_activation_hook(__FILE__,'book_lib_activate_plugin'); 
