@@ -11,4 +11,11 @@ function  book_lib_activate_plugin(){
         
     }
     
+    
+    wp_schedule_event(
+        time(),
+        'daily',
+        'wpl_book_daily_hook'
+    );
+    
 }

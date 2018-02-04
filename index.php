@@ -56,15 +56,23 @@ include('/process/filter_content.php');
 include('/process/getting_template.php');
 //enqueue styles
 include('/process/enqueue.php');
+include('/process/front_enqueue.php');
+include('/admin/process/widget_init.php');
+include('/admin/widgets/daily_book.php');
+include('/admin/process/cron.php');
+include('/process/deactivate.php');
 
 //Hooks
-register_activation_hook(__FILE__,'book_lib_activate_plugin');    
+register_activation_hook(__FILE__,'book_lib_activate_plugin'); 
+register_deactivation_hook(__FILE__,'book_lib_deactivate_plugin');
 add_action('init','wp_book_init');
 add_action('admin_init','wp_book_admin_init');
 add_action( 'admin_enqueue_scripts', 'wpl_add_enqueue');
 add_action('save_post_book','wp_book_save_post',10,3);
 add_filter('single_template', 'wp_book_template');
 add_filter('the_content','filter_book_content');
-
+add_action('wp_enqueue_scripts','book_add_enqueue',100);
+add_action('widgets_init','wp_book_init_widgets');
+add_action('wpl_book_daily_hook','wpl_genrate_daily_book');
 //ShortCodes
 

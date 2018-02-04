@@ -1,0 +1,7 @@
+.btn-buy:active,
+.btn-buy:visited,
+.btn-buy:focus,
+.btn-buy:hover
+{
+ color: #fff !important;  
+}
